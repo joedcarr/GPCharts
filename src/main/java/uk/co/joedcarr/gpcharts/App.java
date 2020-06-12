@@ -7,17 +7,18 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 
 /**
  * JavaFX App
  */
 public class App extends Application {
-
+    private final String MAIN_FXML = "main";
     private static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"));
+        scene = new Scene(loadFXML(MAIN_FXML));
         stage.setScene(scene);
         stage.show();
     }

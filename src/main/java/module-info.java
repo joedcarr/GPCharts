@@ -1,4 +1,7 @@
 module uk.co.joedcarr.gpcharts {
+    requires ergast;
+
+    requires java.sql;
     requires javafx.controls;
     requires javafx.fxml;
 
