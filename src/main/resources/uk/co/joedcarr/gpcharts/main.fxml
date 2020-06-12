@@ -4,12 +4,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.co.joedcarr.gpcharts.MainController">
-   <children>
-      <Label text="Primary View" />
-      <Button onAction="#listDrivers" text="List Drivers" />
-   </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
-</VBox>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.co.joedcarr.gpcharts.MainController">
+   <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="210.0">
+      <Label text="Season:"/>
+      <Spinner fx:id="seasonSpinner">
+         <HBox.margin>
+            <Insets left="12.0"/>
+         </HBox.margin>
+      </Spinner>
+   </HBox>
+   <Button layoutX="26.0" layoutY="232.0" onAction="#listDrivers" text="List Drivers"/>
+</AnchorPane>
