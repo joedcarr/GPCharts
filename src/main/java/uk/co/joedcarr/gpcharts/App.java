@@ -7,11 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.concurrent.ExecutionException;
 
-/**
- * JavaFX App
- */
 public class App extends Application {
     private final String MAIN_FXML = "main";
     private static Scene scene;
@@ -19,6 +15,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML(MAIN_FXML));
+        scene.getStylesheets().add(getClass().getResource("styles/main.css").toExternalForm());
         stage.setScene(scene);
         stage.setTitle("GP Charts");
         stage.show();
@@ -29,7 +26,7 @@ public class App extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("views/" + fxml + ".fxml"));
         return fxmlLoader.load();
     }
 
