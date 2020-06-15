@@ -6,5 +6,6 @@ module uk.co.joedcarr.gpcharts {
     requires javafx.fxml;
 
     opens uk.co.joedcarr.gpcharts to javafx.fxml;
+    opens uk.co.joedcarr.gpcharts.models;
     exports uk.co.joedcarr.gpcharts;
 }

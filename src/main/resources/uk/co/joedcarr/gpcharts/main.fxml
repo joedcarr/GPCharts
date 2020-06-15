@@ -15,6 +15,13 @@
    </HBox>
    <Button layoutX="78.0" layoutY="102.0" onAction="#loadResults" text="Load Results" />
    <ScrollPane layoutX="224.0" layoutY="14.0">
-      <TableView fx:id="resultsTable" prefHeight="575.0" prefWidth="566.0"/>
+      <TableView fx:id="resultsTable" prefHeight="575.0" prefWidth="566.0">
+         <placeholder>
+            <VBox alignment="CENTER">
+               <Label>No results to show.</Label>
+               <Label>Click 'Load Results' to begin.</Label>
+            </VBox>
+         </placeholder>
+      </TableView>
    </ScrollPane>
 </AnchorPane>
